@@ -2,7 +2,7 @@ let gulp = require("gulp");
 let server = require("gulp-webserver");
 let ts = require("gulp-typescript");
 let sourcemaps = require("gulp-sourcemaps");
-let tsConfig = require("./ts-config.json");
+let tsConfig = require("./tsconfig.json");
 
 const APP_SRC = "builds/dev";
 const TS_SRC = "process/ts";

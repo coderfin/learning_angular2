@@ -1,0 +1,11 @@
+<section>
+    <h1>Artist Directory</h1>
+    <h2 data-ng-if="name">{{name}}</h2>
+    <h2 data-ng-if="name" [textContent]="name"></h2>
+    <label>New Artist</label>
+    <input type="text" [(ngModel)]="name" #newArtist (keyup.enter)="addArtist(newArtist.value)" on-blur="addArtist(newArtist.value)">
+    <button (click)="addArtist(newArtist.value)">Add</button>
+</section>
+<ul>
+    <li #nameContainer *ngFor="let name of artists" on-click="onClick(name, nameContainer)">{{name}}</li>
+</ul>
