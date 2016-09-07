@@ -1,2 +1,2 @@
-SystemJS.import("js/components/tv-app")
+SystemJS.import("js/bootstrap")
     .catch(console.error.bind(console));

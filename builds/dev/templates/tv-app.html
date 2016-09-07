@@ -1,1 +1,15 @@
-<h1>Test</h1>
+<section>
+    <h1>Programming Languages</h1>
+    <h2 *ngIf="selectedLanguage">Selected: <span>{{selectedLanguage}}</span></h2>
+    <h3 *ngIf="lastCreatedLanguage" [textContent]="lastCreatedLanguage"></h3>
+    <label for="new-language">New Language</label>
+    <input
+        #newLanguageEl
+        type="text"
+        name="new-language"
+        (keyup.enter)="addLanguage(newLanguageEl)"
+        [(ngModel)]="lastCreatedLanguage">
+</section>
+<ul>
+    <li #languageEl *ngFor="let language of languages" (click)="click(language, languageEl)">{{language}}</li>
+</ul>

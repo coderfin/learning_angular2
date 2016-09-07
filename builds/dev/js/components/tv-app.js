@@ -21,11 +21,21 @@ System.register(["angular2/core"], function(exports_1, context_1) {
             // Decorator - Tells about the component
             TvApp = (function () {
                 function TvApp() {
+                    this.languages = ["PHP", "C#", "JavaScript"];
                 }
+                TvApp.prototype.click = function (language, languageEl) {
+                    this.selectedLanguage = language;
+                    languageEl.classList.toggle("selected");
+                };
+                TvApp.prototype.addLanguage = function (addLanguageEl) {
+                    this.languages.push(addLanguageEl.value);
+                    addLanguageEl.value = "";
+                };
                 TvApp = __decorate([
                     core_1.Component({
                         selector: "tv-app",
-                        templateUrl: "templates/tv-app.html"
+                        templateUrl: "templates/tv-app.html",
+                        styleUrls: ["css/components/tv-app.css"]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], TvApp);
