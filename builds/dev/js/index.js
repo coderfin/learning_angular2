@@ -1,4 +1,4 @@
-SystemJS.import("js/app")
+SystemJS.import("js/components/tv-app")
     .catch(console.error.bind(console));
 
 //# sourceMappingURL=index.js.map

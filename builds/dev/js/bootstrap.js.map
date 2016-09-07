@@ -1,0 +1,1 @@
+{"version":3,"sources":["bootstrap.ts"],"names":[],"mappings":";;;;;;;;;;;;;YAGA,sBAAsB;YACtB,mBAAS,CAAC,cAAK,CAAC,CAAC","file":"bootstrap.js","sourcesContent":["import { bootstrap } from \"angular2/platform/browser\";\nimport { TvApp } from \"./components/tv-app\";\n\n// Load Root Component\nbootstrap(TvApp);"],"sourceRoot":"/source/"}
