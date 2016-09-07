@@ -1,5 +1,21 @@
 import { Component } from "angular2/core";
 
+interface Artist {
+    name: string;
+    shortName: string;
+    reknown: string;
+    bio: string;
+}
+
+const ARTISTS: Artist[] = [
+    {
+        name: "test",
+        shortName: "test",
+        reknown: "test",
+        bio: "test"
+    }
+];
+
 // Decorator: Info about the Component
 @Component({
     selector: "tv-app",
@@ -8,7 +24,7 @@ import { Component } from "angular2/core";
 })
 export class AppComponent {
     name: string = "begin";
-    artists: string[] = [];
+    artists: Artist[] = ARTISTS;
 
     onClick(name: string, nameContainer: HTMLUListElement) {
        this.name = name;
@@ -17,6 +33,8 @@ export class AppComponent {
     }
 
     addArtist(artist: string) {
-        this.artists.push(artist);
+        this.artists.push(<Artist>{
+            name: artist
+        });
     }
 }

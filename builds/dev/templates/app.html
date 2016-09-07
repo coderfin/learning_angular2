@@ -7,5 +7,5 @@
     <button (click)="addArtist(newArtist.value)">Add</button>
 </section>
 <ul>
-    <li #nameContainer *ngFor="let name of artists" on-click="onClick(name, nameContainer)">{{name}}</li>
+    <li #nameContainer *ngFor="let artist of artists" on-click="onClick(artist.name, nameContainer)">{{artist.name}}</li>
 </ul>

@@ -11,25 +11,35 @@ System.register(["angular2/core"], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var AppComponent;
+    var ARTISTS, AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
+            ARTISTS = [
+                {
+                    name: "test",
+                    shortName: "test",
+                    reknown: "test",
+                    bio: "test"
+                }
+            ];
             // Decorator: Info about the Component
             AppComponent = (function () {
                 function AppComponent() {
                     this.name = "begin";
-                    this.artists = [];
+                    this.artists = ARTISTS;
                 }
                 AppComponent.prototype.onClick = function (name, nameContainer) {
                     this.name = name;
                     nameContainer.style.backgroundColor = "#FECE4E";
                 };
                 AppComponent.prototype.addArtist = function (artist) {
-                    this.artists.push(artist);
+                    this.artists.push({
+                        name: artist
+                    });
                 };
                 AppComponent = __decorate([
                     core_1.Component({
